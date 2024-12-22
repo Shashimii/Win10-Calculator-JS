@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
+    <script defer src="script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="main-container">
+            <div class="calculator">
+                <div class="screen">
+                    <div>
+                        <input type="text" class="secondary" disabled>
+                    </div>
+                    <div>
+                        <input type="text" class="primary" readonly>
+                    </div>
+                </div>
+                <div class="keypad">
+                    <div class="row">
+                        <button class="btn-clear"  data-value="C">CLR</button>
+                        <button class="btn-delete" data-value="R">DEL</button>
+                        <button class="btn-operation" data-value="/">/</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn" data-value="7">7</button>
+                        <button class="btn" data-value="8">8</button>
+                        <button class="btn" data-value="9">9</button>
+                        <button class="btn-operation" data-value="*">*</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn" data-value="4">4</button>
+                        <button class="btn" data-value="5">5</button>
+                        <button class="btn" data-value="6">6</button>
+                        <button class="btn-operation" data-value="-">-</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn" data-value="1">1</button>
+                        <button class="btn" data-value="2">2</button>
+                        <button class="btn" data-value="3">3</button>
+                        <button class="btn-operation" data-value="+">+</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn" data-value="0">0</button>
+                        <button class="btn-period" data-value=".">.</button>
+                        <button class="btn-equal" data-value="=">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
