@@ -1,44 +1,138 @@
 * {
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.main-container {
+body {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 2% 10%;
 }
 
 .calculator {
+    background-color: #202020;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    height: 45rem;
+    padding: 2px;
+    border: 1px solid #372254;
+}
+
+.windows-options {
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.windows-options .opt-left {
+    display: flex;
     gap: 1rem;
-    width: 20rem;
+}
+
+.windows-options .opt-right {
+    display: flex;
+    gap: 1rem;
 }
 
 .screen {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.screen .upper-toolbar {
     padding: 1rem;
+    color: #666666;
+    font-size: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-toolbar .toolbar-left {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-self: flex-start;
+    gap: 1rem;
+}
+
+.screen .lower-toolbar {
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-toolbar .option {
+    color: #666666;
+}
+
+.screen .primary {
+    background-color: #202020;
+    color:  #ffffff;
+    font-size: 70px;
+    font-weight: 500;
     text-align: right;
-    background-color: green;
+    padding-right: 0.5rem;
+    height: 5rem;
+    border: none;
+}
+
+.screen .secondary {
+    background-color: #202020;
+    color:  #a6a6a6;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 1rem;
+    height: 2rem;
+    border: none;
 }
 
 .keypad {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
 }
 
 .row {
+    flex: 1;
     display: flex;
-    width: 100%;
-    gap: 0.5rem;
 }
 
-.btn, .btn-zero, .btn-clear, .btn-delete, .btn-period, .btn-equal, .btn-operation {
-    height: 3rem;
+.buttons {
+    margin: 2px;
     width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+
+.buttons:hover {
+    background-color: #323232;
+}
+
+.equal {
+    background-color: #b290e2;
+}
+
+.equal:hover {
+    background-color: #a082cb;
+}
+
+.disabled {
+    background-color: #323232;
+    color: #666666;
 }

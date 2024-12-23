@@ -3,52 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
     <main>
-        <div class="main-container">
-            <div class="calculator">
-                <div class="screen">
-                    <div>
-                        <input type="text" class="secondary" disabled>
+        <div class="calculator">
+            <div class="screen">
+                <div class="windows-options">
+                    <div class="opt-left">
+                        <img src="Windows_Calculator_icon.png" alt="" width="20px">
+                        <p>Calculator</p>
                     </div>
-                    <div>
-                        <input type="text" class="primary" readonly>
+                    <div class="opt-right">
+                        <i class="fa-solid fa-window-minimize"></i>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-solid fa-x"></i>
                     </div>
                 </div>
-                <div class="keypad">
-                    <div class="row">
-                        <button class="btn-clear"  data-value="C">CLR</button>
-                        <button class="btn-delete" data-value="R">DEL</button>
-                        <button class="btn-operation" data-value="/">/</button>
+                <div class="upper-toolbar">
+                    <div class="toolbar-left">
+                        <i class="fa-solid fa-bars"></i>
+                        <p class="mode-text">Standard</p>
+                        <i class="fa-solid fa-thumbtack"></i>
                     </div>
-                    <div class="row">
-                        <button class="btn" data-value="7">7</button>
-                        <button class="btn" data-value="8">8</button>
-                        <button class="btn" data-value="9">9</button>
-                        <button class="btn-operation" data-value="*">*</button>
+                    <div class="toolbar-right">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
                     </div>
-                    <div class="row">
-                        <button class="btn" data-value="4">4</button>
-                        <button class="btn" data-value="5">5</button>
-                        <button class="btn" data-value="6">6</button>
-                        <button class="btn-operation" data-value="-">-</button>
-                    </div>
-                    <div class="row">
-                        <button class="btn" data-value="1">1</button>
-                        <button class="btn" data-value="2">2</button>
-                        <button class="btn" data-value="3">3</button>
-                        <button class="btn-operation" data-value="+">+</button>
-                    </div>
-                    <div class="row">
-                        <button class="btn" data-value="0">0</button>
-                        <button class="btn-period" data-value=".">.</button>
-                        <button class="btn-equal" data-value="=">=</button>
-                    </div>
+                </div>
+                <input type="text" class="secondary" disabled>
+                <input type="text" class="primary" readonly>
+                <div class="lower-toolbar">
+                    <p class="option">MC</p>
+                    <p class="option">MR</p>
+                    <p class="option">M+</p>
+                    <p class="option">M-</p>
+                    <p class="option">MS</p>
+                    <p class="option">M</p>
+                </div>
+            </div>
+            <div class="keypad">
+                <div class="row">
+                    <button class="buttons disabled"  data-value="">%</button>
+                    <button class="buttons disabled"  data-value="">CE</button>
+                    <button class="buttons btn-clear"  data-value="C"><i class="fa-solid fa-c"></i></button>
+                    <button class="buttons btn-delete" data-value="R"><i class="fa-solid fa-delete-left"></i></button>
+                </div>
+                <div class="row">
+                    <button class="buttons disabled"  data-value="">1/x</button>
+                    <button class="buttons disabled"  data-value="">x2</button>
+                    <button class="buttons disabled"  data-value="">2/X</button>
+                    <button class="buttons btn-operation" data-value="/"><i class="fa-solid fa-divide"></i></button>
+                </div>
+                <div class="row">
+                    <button class="buttons btn" data-value="7">7</button>
+                    <button class="buttons btn" data-value="8">8</button>
+                    <button class="buttons btn" data-value="9">9</button>
+                    <button class="buttons btn-operation" data-value="*"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="row">
+                    <button class="buttons btn" data-value="4">4</button>
+                    <button class="buttons btn" data-value="5">5</button>
+                    <button class="buttons btn" data-value="6">6</button>
+                    <button class="buttons btn-operation" data-value="-"><i class="fa-solid fa-minus"></i></button>
+                </div>
+                <div class="row">
+                    <button class="buttons btn" data-value="1">1</button>
+                    <button class="buttons btn" data-value="2">2</button>
+                    <button class="buttons btn" data-value="3">3</button>
+                    <button class="buttons btn-operation" data-value="+"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="row">
+                    <button class="buttons disabled"  data-value="">+/-</button>
+                    <button class="buttons btn" data-value="0">0</button>
+                    <button class="buttons btn-period" data-value=".">.</button>
+                    <button class="buttons equal btn-equal" data-value="="><i class="fa-solid fa-equals"></i></button>
                 </div>
             </div>
         </div>
