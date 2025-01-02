@@ -22,6 +22,12 @@ var saved = '';
 var solution = '';
 var compute = '';
 var result = '';
+// symbols
+const symbols = new Map([
+    [' × ', '*'],
+    [' ÷ ', '/'],
+]);
+
 
 // functions
 const handleOperation = (operation) => {
@@ -50,7 +56,7 @@ const firstComputation = () => {
 
 const continousComputation = () => {
     const num1 = primary.value;
-    solution = secondary.value.replace(/^-?\d+(?=[+\-/*])/, num1);
+    solution = secondary.value.replace(/^-?\d*\.?\d+(?=\s*[+\-/*])/, num1);
     compute = solution.replace(/=/g, "");
     result = math.evaluate(compute);
     secondary.value = solution;
@@ -61,7 +67,7 @@ const continousComputation = () => {
 const computeSaved = () => {
     // load and compute the saved
     const num1 = primary.value;
-    solution = saved.replace(/^-?\d+(?=[+\-/*])/, num1);
+    solution = saved.replace(/^-?\d*\.?\d+(?=\s*[+\-/*])/, num1);
     compute = solution.replace(/=/g, "");
     result = math.evaluate(compute);
     secondary.value = solution;
